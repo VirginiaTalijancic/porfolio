@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #191f36;
+    --snd-bf-color: #262B40;
+    --text-color: #fff;
+    --main-color: #59B2F4;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    padding: 10rem 9% 2rem;
+}
+
+.navbar-brand {
+    color: pink;/* Color de texto rosado */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.navbar-nav .nav-link {
+    color:white!important; /* Color de texto rosado */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.navbar-nav .nav-link:hover {
+    color:pink !important; /* Cambia de color al pasar el cursor */
+}
+
+.home,
+.about,
+.services,
+.porfolio,
+.contact-section,
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content h3,
+.about-content h2,
+.about-content h3,
+.services h2,
+.porfolio h2 {
+    margin-bottom: 3rem;
+}
+
+.home-content h1 {
+    line-height: 1.3;
+}
+.custom-image {
+    margin-left: 30px; /* Ajusta el valor según tu preferencia */
+}
+
+.home-img img {
+    width: 15vw;
+    border-radius: 50%;
+    animation: floatImage 4s ease-in-out infinite; /* Agregar la animación aquí */
+    opacity: 0.7;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#typing-effect {
+    color: pink; /* Color rosado para el texto principal */
+}
+#typing-effect span {
+    color: black;
+}
+
+.button-cv {
+    background-color: black;
+    color: pink;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.button-cv:hover {
+    background-color: pink;
+    color: black;
+}
+
+.home-img img,
+.about img,
+.portfolio-image {
+    width: 15vw;
+    border-radius: 50%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0.7;
+}
+
+.portfolio-image:hover {
+    transform: scale(1.1);
+}
+
+.about-content {
+    margin-top: 30px;
+  }
+  
+  .about .row {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos dentro de la fila */
+  }
+  
+  .about img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho de su contenedor */
+  }
+  
+  .about .col-lg-6 {
+    margin-bottom: 30px; /* Ajusta el margen inferior de las columnas para acercar la foto al texto */
+  }
+
+  .about .col-lg-6.text-center img {
+    margin-left: 40px; /* Ajusta el margen izquierdo de la imagen para desplazarla hacia la derecha */
+  }
+
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--snd-bf-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.services {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Ajusta la duración y el efecto de la transición según tu preferencia */
+  }
+  
+  .services.active {
+    opacity: 1;
+  }
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .row {
+    width: 100%;
+    max-width: 1200px; /* Ajusta el ancho máximo según sea necesario */
+  }
+  .services {
+    position: relative;
+  }
+  
+  .heading {
+    color: pink; /* Color de texto negro por defecto */
+    transition: color 0.3s; /* Transición suave del color */
+    position: relative; /* Cambiado a posicionamiento relativo */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: -10px; /* Ajustar el margen inferior */
+  }
+
+  .heading:hover{
+    color: black;
+  }
+
+  a {
+    display: inline-block; /* Para que el enlace ocupe solo el espacio necesario */
+    position: relative; /* Para establecer el contexto de posicionamiento */
+  }
+  
+  /* Estilo para el enlace al pasar el cursor sobre la imagen */
+  a:hover::after {
+    content: ""; /* Agrega contenido al pseudo-elemento */
+    position: absolute; /* Establece posicionamiento absoluto */
+    top: 0; /* Coloca el pseudo-elemento en la parte superior */
+    left: 0; /* Coloca el pseudo-elemento en la parte izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background-color: rgba(255, 255, 255, 0.5); /* Color de fondo semitransparente */
+    z-index: 1; /* Asegura que esté por encima de la imagen */
+  }
+
+
+.footer b {
+    
+    color:white; /* Color de texto blanco por defecto */
+    transition: color 0.3s; /* Transición suave del color */
+  }
+
+  /* Cambio de color del texto cuando se pasa el mouse */
+  .footer b:hover {
+    color: pink; /* Cambia el color del texto a rosa al pasar el mouse */
+  }
+
+  p a {
+    color:white; /* Color del enlace sin visitar */
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    font-weight: bold
+  }
+
+  /* Cambiar el color del enlace cuando se pasa el mouse */
+  p a:hover {
+    color: pink; /* Color del enlace al pasar el mouse */
+  }
