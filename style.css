@@ -153,41 +153,23 @@ section {
 .btn:hover {
     box-shadow: none;
 }
-
-.services {
-    opacity: 0;
-    transition: opacity 1s ease-in-out; /* Ajusta la duración y el efecto de la transición según tu preferencia */
-  }
-  
-  .services.active {
-    opacity: 1;
-  }
-
-  .services {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .row {
-    width: 100%;
-    max-width: 1200px; /* Ajusta el ancho máximo según sea necesario */
-  }
-  .services {
-    position: relative;
-  }
-  
-  .heading {
-    color: pink; /* Color de texto negro por defecto */
-    transition: color 0.3s; /* Transición suave del color */
-    position: relative; /* Cambiado a posicionamiento relativo */
-    text-align: center; /* Centrar el texto */
-    margin-bottom: -10px; /* Ajustar el margen inferior */
+  .heading{
+    text-align: center;
+    color: pink
   }
 
   .heading:hover{
-    color: black;
+    color: black
   }
+
+  #services {
+    opacity: 0; /* Establece la opacidad inicial en 0 */
+    transition: opacity 1.5s ease-in-out; /* Transición suave */
+}
+
+#services.active {
+    opacity: 1; /* Cambia la opacidad a 1 cuando se activa la clase 'active' */
+}
 
   a {
     display: inline-block; /* Para que el enlace ocupe solo el espacio necesario */
@@ -228,3 +210,26 @@ section {
   p a:hover {
     color: pink; /* Color del enlace al pasar el mouse */
   }
+
+  .servicios-box {
+    border: 1px solid #ccc; /* Agrega un borde alrededor de cada sección */
+    padding: 20px; /* Añade un poco de relleno dentro de cada sección */
+    margin-bottom: 20px; /* Espacio entre cada sección */
+}
+
+.servicios-box img {
+    margin-bottom: 10px; /* Espacio entre la imagen y el párrafo */
+}
+
+.description {
+    margin-bottom: 0; /* Elimina el margen inferior del párrafo para un espacio más uniforme */
+}
+
+.servicios-box h3 {
+  color:pink; /* Cambia el color del texto al pasar el cursor */
+}
+
+.servicios-box h3:hover{
+  color: black;
+}
+

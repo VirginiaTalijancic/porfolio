@@ -30,29 +30,21 @@ function erase() {
 type();
 
 document.addEventListener('DOMContentLoaded', () => {
-    window.addEventListener('scroll', () => {
-      const servicesSection = document.getElementById('services');
-      const scrollPosition = window.scrollY;
-  
-      const sectionTop = servicesSection.offsetTop;
-      const sectionHeight = servicesSection.clientHeight;
-  
-      if (scrollPosition >= sectionTop - sectionHeight / 3) {
-        servicesSection.classList.add('active');
-      } else {
-        servicesSection.classList.remove('active');
-      }
-    });
+  window.addEventListener('scroll', () => {
+    const servicesSection = document.getElementById('services');
+    const scrollPosition = window.scrollY;
+
+    const sectionTop = servicesSection.offsetTop;
+    const sectionHeight = servicesSection.clientHeight;
+    
+    const threshold = window.innerHeight / 2;
+
+    if (scrollPosition >= sectionTop - threshold) {
+      servicesSection.classList.add('active');
+    } else {
+      servicesSection.classList.remove('active');
+    }
   });
-
-  document.getElementById("enlace-sobre-mi").addEventListener("click", function(event) {
-    event.preventDefault(); // Evita que el enlace redireccione a una página
-
-    // Obtiene la sección "About Me" por su ID
-    const seccionSobreMi = document.getElementById("about");
-
-    // Desplaza la página para que la sección "About Me" sea visible
-    seccionSobreMi.scrollIntoView({ behavior: "smooth" });
 });
 
 document.getElementById("enlace-servicios").addEventListener("click", function(event) {
