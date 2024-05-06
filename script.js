@@ -58,3 +58,18 @@ document.getElementById("enlace-contacto").addEventListener("click", function(ev
   const seccionContacto = document.getElementById("contacto");
   seccionContacto.scrollIntoView({ behavior: "smooth" });
 });
+
+
+document.getElementById('btnDescargarCV').addEventListener('click', function() {
+  
+  const url = "https://drive.google.com/uc?export=download&id=1hgaeQHx5A0sG64Hb-9djkzxxbh96ve9t";
+
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'MariaVirginia_Talijancic_CV.pdf';
+
+  document.body.appendChild(link);
+  link.click();
+
+  document.body.removeChild(link);
+});
